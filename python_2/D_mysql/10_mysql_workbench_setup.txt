@@ -1,0 +1,5 @@
+USE twitter;
+SELECT * FROM users;
+INSERT INTO `twitter`.`users` (`id`, `first_name`, `last_name`, `handle`, `birthday`, `created_at`, `updated_at`) VALUES ('6', 'Lisa', 'Chen', 'lisaboss', '1900-01-01', '2021-10-24 00:00:01', '2021-10-24 00:00:01');
+UPDATE `twitter`.`users` SET `last_name` = 'Riddle' WHERE (`id` = '5');
+DELETE FROM `twitter`.`users` WHERE (`id` = '5');

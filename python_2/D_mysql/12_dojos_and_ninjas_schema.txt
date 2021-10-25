@@ -1,0 +1,29 @@
+USE dojos_and_ninjas_schema_p2;
+
+INSERT INTO `dojos_and_ninjas_schema_p2`.`dojos` (`id`, `name`, `created_at`, `updated_at`) VALUES ('1', 'Python', '2021-10-24 11:00:00', '2021-10-24 11:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`dojos` (`id`, `name`, `created_at`, `updated_at`) VALUES ('2', 'Java', '2021-10-24 11:00:00', '2021-10-24 11:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`dojos` (`id`, `name`, `created_at`, `updated_at`) VALUES ('3', 'MERN', '2021-10-24 11:00:00', '2021-10-24 11:00:00');
+
+DELETE FROM `dojos_and_ninjas_schema_p2`.`dojos` WHERE (`id` = '1');
+DELETE FROM `dojos_and_ninjas_schema_p2`.`dojos` WHERE (`id` = '2');
+DELETE FROM `dojos_and_ninjas_schema_p2`.`dojos` WHERE (`id` = '3');
+
+SELECT * FROM dojos;
+
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('1', 'Lisa', 'Chen', '100', '1', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('2', 'Phillip', 'Chen', '300', '1', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('3', 'Saria', 'Chen', '500', '1', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('4', 'Ganon', 'Dorf', '1000', '2', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('5', 'Zelda', 'Princess', '2000', '2', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('6', 'Link', 'Hero', '1003', '2', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('7', 'Cloud', 'Main', '300', '3', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('8', 'Tifa', 'Side', '200', '3', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+INSERT INTO `dojos_and_ninjas_schema_p2`.`ninjas` (`id`, `first_name`, `last_name`, `age`, `dojo_id`, `created_at`, `updated_at`) VALUES ('9', 'Barrett', 'Side', '200', '3', '2021-10-24 12:00:00', '2021-10-24 12:00:00');
+
+SELECT * FROM ninjas WHERE dojo_id = 1;
+SELECT * FROM ninjas ORDER BY dojo_id DESC LIMIT 3;
+SELECT dojos.id, name, dojos.created_at, dojos.updated_at FROM ninjas
+JOIN dojos ON dojos.id = ninjas.dojo_id
+ORDER BY ninjas.id DESC LIMIT 1
+
+
