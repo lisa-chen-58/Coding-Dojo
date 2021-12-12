@@ -52,7 +52,7 @@ console.log(first == second);
 console.log(first == third);
 
 //Prediction 4
-// false and true? <-- confirmed
+// false and true? <-- confirmed (2 is not equal to 5 and 2 is equal to 2)
 
 // Problem 5
 const lastTest = {
