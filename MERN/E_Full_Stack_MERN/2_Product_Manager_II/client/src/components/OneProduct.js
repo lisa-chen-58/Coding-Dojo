@@ -1,9 +1,9 @@
-import React, { useEffect, useState  } from 'react'
+import React, { useEffect, useState  } from 'react';
 import axios from 'axios';
 import { Link, navigate } from '@reach/router';
 
 const OneProduct = (props) => {
-    const [oneProduct, setOneProduct] = useState({})
+    const [oneProduct, setOneProduct] = useState({});
     const{id}=props;
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ const OneProduct = (props) => {
                 console.log(res.data);
                 setOneProduct(res.data);
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.log(err))
 
     },[])
 
