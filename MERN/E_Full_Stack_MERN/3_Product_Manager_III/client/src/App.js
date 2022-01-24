@@ -16,7 +16,6 @@ function App() {
         <Main path="/"/>
         <OneProduct path = "/products/:id"/>
         <ModifyProduct path="/products/update/:id"/>
-        <ModifyProduct path="/products/delete/:id"/>
       </Router>
     </div>
   );
