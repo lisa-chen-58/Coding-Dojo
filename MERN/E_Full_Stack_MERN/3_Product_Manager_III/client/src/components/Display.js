@@ -35,7 +35,7 @@ const deleteAction = (deleteId) => {
         <div>
             {
                 productList.map((product,index) => (
-                    <div key={product._id} className="App-header">
+                    <div key={index} className="App-header">
                         <tr>
                             <Link className="App-link" to={`/products/${product._id}`}>{product.title} - $'{product.price}' </Link>
                         </tr>
