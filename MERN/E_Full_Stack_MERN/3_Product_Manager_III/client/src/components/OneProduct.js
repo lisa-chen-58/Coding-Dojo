@@ -33,7 +33,7 @@ const OneProduct = (props) => {
             <p>Cost: ${oneProduct.price}</p>
             <p>Description: {oneProduct.description}</p>
             <button 
-                onClick={()=> deleteActionAgain(id)} 
+                onClick={deleteActionAgain} 
                 className="submit-button"
             >
                 Delete this product
