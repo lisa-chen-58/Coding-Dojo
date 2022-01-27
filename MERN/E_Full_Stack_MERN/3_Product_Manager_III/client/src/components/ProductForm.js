@@ -39,7 +39,7 @@ const ProductForm = (props) => {
             </p>
             <p>
                 <label>Price: </label><br/>
-                <input type="number" onChange = {(e)=>setPrice(e.target.value)}/>
+                <input type="number" step = "0.01" min="0" onChange = {(e)=>setPrice(e.target.value)}/>
             </p>
             <p>
                 <label>Description: </label><br/>

@@ -15,3 +15,12 @@ const AuthorSchema = new mongoose.Schema({
 )
 
 module.exports = mongoose.model('Author', AuthorSchema);
+
+
+// const AuthorSchema = new mongoose.Schema(
+    //{
+        //books: { type: [String] },
+        //name: {type: String }, 
+    // },
+    // {timestamps: true }
+// )
