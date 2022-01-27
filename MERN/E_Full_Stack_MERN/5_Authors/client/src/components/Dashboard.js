@@ -24,7 +24,7 @@ const Dashboard = (props) => {
     },[])
 
     const deleteAction = (deleteId) => {
-        axios.delete(`http://localhost:8000/api/authors/$(deleteId}`)
+        axios.delete(`http://localhost:8000/api/authors/${deleteId}`)
         .then((res) => {
             console.log(res.data);
             setAuthorList(authorList.filter((author,index) => author._id !== deleteId
@@ -32,6 +32,14 @@ const Dashboard = (props) => {
         })
         .catch((err) => console.log(err));
     }
+
+    // const removeBook = { e, index) => {
+    // e.preventDefault();
+    // const newBooks = [...books];
+    // newBooks.splice(index, 1);
+    // setBooks(newBooks);
+// }}
+
 
     return (
         <div className="App-header">
